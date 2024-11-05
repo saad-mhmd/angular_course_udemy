@@ -1,5 +1,5 @@
 <div>
-    <button (click)="onSelectUser()">
+    <button [class.active]="selected" (click)="onSelectUser()">
         <img [src]="imagePath" [alt]="user.name" /> <!-- Property binding. imagePath is a getter, so we don't use () even if it's defined like a method, it's used like a property -->
         <span>{{ user.name }}</span> <!-- {{ String interpolation}}, usually used between tags -->
     </button>
